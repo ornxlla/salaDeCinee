@@ -40,6 +40,14 @@ public class PruebaSalaDeCine {
 				}
 			case CANTIDAD_DE_BUTACAS_OCUPADAS:
 				System.out.println("Las cantidad de butacas ocupadas son: " + sala.cantidadDeButacasOcupadas());
+			case ACOMODAR_GRUPO:
+				System.out.println("Cuantas personas desea acomodar?");
+				Integer cantidadDePersonas = teclado.nextInt();
+				if(sala.hayEspacioPara(cantidadDePersonas) == true) {
+					System.out.println("Se pueden acomodar perfectamente.");
+				} else {
+					System.out.println("No hay lugar para esa cantidad de personas.");
+				}
 			}
 		} while (opcion != SALIR);
 	}
