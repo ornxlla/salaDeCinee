@@ -37,9 +37,12 @@ public class PruebaSalaDeCine {
 						}
 					} else {
 						System.out.println("Ocurrio un error.");
+						
 				}
+				break;
 			case CANTIDAD_DE_BUTACAS_OCUPADAS:
 				System.out.println("Las cantidad de butacas ocupadas son: " + sala.cantidadDeButacasOcupadas());
+				break;
 			case ACOMODAR_GRUPO:
 				System.out.println("Cuantas personas desea acomodar?");
 				Integer cantidadDePersonas = teclado.nextInt();
@@ -48,7 +51,9 @@ public class PruebaSalaDeCine {
 				} else {
 					System.out.println("No hay lugar para esa cantidad de personas.");
 				}
+				break;
 			}
+			
 		} while (opcion != SALIR);
 	}
 
