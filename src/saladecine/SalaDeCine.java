@@ -45,4 +45,23 @@ public class SalaDeCine {
 			}
 		}
 	}
+	
+	public Boolean hayEspacioPara(Integer cantidadDePersonas) {
+		Boolean hayEspacio = false;
+		int contador = 0;
+		for(int i = 0; i<enLaSala.length; i++) {
+			for(int j= 0; j<enLaSala[j].length; j++) {
+				if(enLaSala[i][j] != null && enLaSala[i][j].getOcupada() == false) {
+					contador = contador + 1;
+					if(contador == cantidadDePersonas) {
+						hayEspacio = true;
+					} 
+				} else if (enLaSala[i][j] != null && enLaSala[i][j].getOcupada() == true) {
+					contador = 0;
+					hayEspacio = false;
+					
+				}
+			}
+		} return hayEspacio;
+	}
 }
