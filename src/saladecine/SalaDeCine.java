@@ -1,22 +1,23 @@
 package saladecine;
 
 public class SalaDeCine {
+	// Atributos
 	private Butaca enLaSala[][] = new Butaca [20][15];
 	private Integer cantidadDeButacasOcupadas;
 	private String nombreDelCine;
-	
+	// Constructor
 	public SalaDeCine(String nombreDelCine) {
 		this.cantidadDeButacasOcupadas = 0;
 		this.nombreDelCine = nombreDelCine;
 		this.inicializarMatriz();
 	}
 	
-	
+	// Get
 	public String getNombreDelCine() {
 		return nombreDelCine;
 	}
 
-
+	// Metodos
 	public Boolean estaOcupada(Integer fila, Integer columna) {
 		Boolean ocupada = enLaSala[fila][columna].getOcupada();
 		return ocupada;
