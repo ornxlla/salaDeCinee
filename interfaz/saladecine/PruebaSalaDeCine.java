@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class PruebaSalaDeCine {
 	public final static int CONSULTAR_SI_ESTA_OCUPADA = 1;
 	public final static int OCUPAR_BUTACA = 1;
-	public final static int CANTIDAD_DE_BUTACAS_DISPONIBLES = 2;
+	public final static int CANTIDAD_DE_BUTACAS_OCUPADAS = 2;
 	public final static int ACOMODAR_GRUPO = 3;
 	public final static int SALIR = 0;
 	
@@ -38,6 +38,8 @@ public class PruebaSalaDeCine {
 					} else {
 						System.out.println("Ocurrio un error.");
 				}
+			case CANTIDAD_DE_BUTACAS_OCUPADAS:
+				System.out.println("Las cantidad de butacas ocupadas son: " + sala.cantidadDeButacasOcupadas());
 			}
 		} while (opcion != SALIR);
 	}
